@@ -1,0 +1,578 @@
+/* START WITH A CSS RESET! */
+
+/*
+  http://meyerweb.com/eric/tools/css/reset/
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* LET'S GO! */
+
+/* general */
+
+body {
+    font-family: Courier New;
+    padding: 1em;
+}
+
+body:before {
+    content: 'PARSE ERROR: This JSON is being simulated with CSS and is totally useless as a data source.';
+}
+
+/* links */
+
+a,
+a:visited,
+a:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+/* links in content */
+
+p a:before {
+    content: "<a href='" attr(href) "'>";
+}
+
+p a:after {
+    content: '</a>';
+}
+
+/* data */
+
+div.page-wrapper {
+    margin-top: 1em;
+}
+
+div.page-wrapper:before {
+    content: '{';
+}
+div.page-wrapper:after {
+    content: '}';
+}
+
+/* "name" : "CSS Zen Garden" */
+
+section.intro h1 {
+    margin-left: 2em;
+    margin-top: 1em;
+}
+
+section.intro h1:before {
+    content: '"site" : "';
+}
+
+section.intro h1:after {
+    content: '",';
+}
+
+/* "title" : "The Beauty Of CSS Design" */
+
+section.intro h2 {
+    margin-left: 2em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+section.intro h2:before {
+    content: '"tagline" : "';
+}
+
+section.intro h2:after {
+    content: '",';
+}
+
+/* "zen-summary" */
+
+section.intro div#zen-summary {
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+section.intro div#zen-summary:before {
+    content: '"' attr(class) '" : {';
+}
+
+section.intro div#zen-summary p {
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+section.intro div#zen-summary p:first-child {
+    margin-top: 1em;
+}
+
+section.intro div#zen-summary p:nth-child(1):before {
+    content: '  "paragraph-1" : "';
+}
+
+section.intro div#zen-summary p:nth-child(2):before {
+    content: '  "paragraph-2" : "';
+}
+
+section.intro div#zen-summary p:after {
+    content: '",';
+}
+
+section.intro div#zen-summary p:last-child:after {
+    content: '"';
+}
+
+section.intro div#zen-summary:after {
+    content: '},';
+}
+
+/* "zen-preamble" */
+
+section.intro div#zen-preamble {
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+section.intro div#zen-preamble:before {
+    content: '"' attr(class) '" : {';
+}
+
+section.intro div#zen-preamble h3 {
+    margin-left: 2em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+section.intro div#zen-preamble h3:before {
+    content: '"title" : "';
+}
+
+section.intro div#zen-preamble h3:after {
+    content: '",';
+}
+
+section.intro div#zen-preamble p {
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+section.intro div#zen-preamble p:nth-child(2):before {
+    content: '  "paragraph-1" : "';
+}
+
+section.intro div#zen-preamble p:nth-child(3):before {
+    content: '  "paragraph-2" : "';
+}
+
+section.intro div#zen-preamble p:nth-child(4):before {
+    content: '  "paragraph-3" : "';
+}
+
+section.intro div#zen-preamble p:after {
+    content: '",';
+}
+
+section.intro div#zen-preamble p:last-child:after {
+    content: '"';
+}
+
+section.intro div#zen-preamble:after {
+    content: '},';
+}
+
+/* supporting/main */
+
+div#zen-supporting {
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+div#zen-supporting:before {
+    content: '"' attr(role) '" : {';
+}
+
+div#zen-supporting:after {
+    content: '},';
+}
+
+/* explanation */
+
+div#zen-supporting div.explanation h3 {
+    margin-left: 2em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+div#zen-supporting div.explanation h3:before {
+    content: '"title" : "';
+}
+
+div#zen-supporting div.explanation h3:after {
+    content: '",';
+}
+
+div#zen-supporting div.explanation {
+    margin-left: 2em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+div#zen-supporting div.explanation:before {
+    content: '"' attr(class) '" : {';
+}
+
+div#zen-supporting div.explanation p {
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+div#zen-supporting div.explanation p:nth-child(2):before {
+    content: '  "paragraph-1" : "';
+}
+
+div#zen-supporting div.explanation p:nth-child(3):before {
+    content: '  "paragraph-2" : "';
+}
+
+div#zen-supporting div.explanation p:after {
+    content: '",';
+}
+
+div#zen-supporting div.explanation p:last-child:after {
+    content: '"';
+}
+
+div#zen-supporting div.explanation:after {
+    content: '},';
+}
+
+/* participation */
+
+div#zen-supporting div.participation h3 {
+    margin-left: 2em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+div#zen-supporting div.participation h3:before {
+    content: '"title" : "';
+}
+
+div#zen-supporting div.participation h3:after {
+    content: '",';
+}
+
+div#zen-supporting div.participation {
+    margin-left: 2em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+div#zen-supporting div.participation:before {
+    content: '"' attr(class) '" : {';
+}
+
+div#zen-supporting div.participation p {
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+div#zen-supporting div.participation p:nth-child(2):before {
+    content: '  "paragraph-1" : "';
+}
+
+div#zen-supporting div.participation p:nth-child(3):before {
+    content: '  "paragraph-2" : "';
+}
+
+div#zen-supporting div.participation p:nth-child(4):before {
+    content: '  "paragraph-3" : "';
+}
+
+div#zen-supporting div.participation p:after {
+    content: '",';
+}
+
+div#zen-supporting div.participation p:last-child:after {
+    content: '"';
+}
+
+div#zen-supporting div.participation:after {
+    content: '},';
+}
+
+/* benefits */
+
+div#zen-supporting div.benefits {
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+div#zen-supporting div.benefits:before {
+    content: '"' attr(class) '" : {';
+}
+
+div#zen-supporting div.benefits:after {
+    content: '},';
+}
+
+div#zen-supporting div.benefits h3 {
+    margin-left: 2em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+div#zen-supporting div.benefits h3:before {
+    content: '"title" : "';
+}
+
+div#zen-supporting div.benefits h3:after {
+    content: '",';
+}
+
+div#zen-supporting div.benefits p {
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+div#zen-supporting div.benefits p:nth-child(2):before {
+    content: '  "paragraph-1" : "';
+}
+
+div#zen-supporting div.benefits p:after {
+    content: '",';
+}
+
+div#zen-supporting div.benefits p:last-child:after {
+    content: '"';
+}
+
+div#zen-supporting div.benefits:after {
+    content: '},';
+}
+
+/* requirements */
+
+
+div#zen-supporting div.requirements {
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+div#zen-supporting div.requirements:before {
+    content: '"' attr(class) '" : {';
+}
+
+div#zen-supporting div.requirements:after {
+    content: '},';
+}
+
+div#zen-supporting div.requirements h3 {
+    margin-left: 2em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+div#zen-supporting div.requirements h3:before {
+    content: '"title" : "';
+}
+
+div#zen-supporting div.requirements h3:after {
+    content: '",';
+}
+
+div#zen-supporting div.requirements p {
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+div#zen-supporting div.requirements p:nth-child(2):before {
+    content: '  "paragraph-1" : "';
+}
+
+div#zen-supporting div.requirements p:nth-child(3):before {
+    content: '  "paragraph-2" : "';
+}
+
+div#zen-supporting div.requirements p:nth-child(4):before {
+    content: '  "paragraph-3" : "';
+}
+
+div#zen-supporting div.requirements p:nth-child(5):before {
+    content: '  "paragraph-4" : "';
+}
+
+div#zen-supporting div.requirements p:nth-child(6):before {
+    content: '  "credits" : "';
+}
+
+div#zen-supporting div.requirements p:after {
+    content: '",';
+}
+
+div#zen-supporting div.requirements p:last-child:after {
+    content: '"';
+}
+
+div#zen-supporting div.requirements:after {
+    content: '},';
+}
+
+/* footer/tools */
+
+footer {
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+footer:before {
+    content: '"tools" : [';
+}
+
+footer a {
+    display: block;
+    margin-top: 1em;
+    margin-left: 2em;
+}
+
+footer a:before {
+    content: '"<a href=' "'" attr(href) "'" '>';
+}
+
+footer a:after {
+    content: '</a>",';
+}
+
+footer a:last-child:after {
+    content: '</a>"';
+}
+
+
+footer a:last-child {
+    margin-bottom: 1em;
+}
+
+footer:after {
+    content: ']';
+}
+
+/* aside */
+
+aside {
+    margin-top: 1em;
+    margin-left: 2em;
+}
+
+aside div.design-selection {
+    margin-bottom: 1em;
+}
+
+aside div.design-selection h3 {
+    display: none;
+}
+
+div#design-selection:before {
+    content: '"other_designs" : [';
+}
+
+div#design-selection:after {
+    content: ']';
+}
+
+div#design-selection ul {
+    margin-left: 2em;
+    margin-top: 1em;
+}
+
+div#design-selection ul li {
+    margin-bottom: 1em;
+}
+
+div#design-selection ul li a:first-child:before {
+    content: '"<a href=' "'" attr(href) "'" '>';
+}
+
+div#design-selection ul li a:first-child:after {
+    content: '</a>';
+}
+
+div#design-selection ul li a:last-child:before {
+    content: '<a href=' "'" attr(href) "'" '>';
+}
+
+div#design-selection ul li a:last-child:after {
+    content: '</a>",';
+}
+
+div#design-selection ul li a:last-child:after {
+    content: '</a>",';
+}
+
+div#design-selection ul li:last-child a:last-child:after {
+    content: '</a>"';
+}
+
+div#design-selection ul li:last-child a:last-child {
+    margin-bottom: 1em;
+}
+
+/* cleanup */
+
+div#design-archives {
+    display: none;
+}
+
+div#zen-resources {
+    display: none;
+}
+
+div.extra1,
+div.extra2,
+div.extra3,
+div.extra4,
+div.extra5,
+div.extra6 {
+    display: none;
+}
